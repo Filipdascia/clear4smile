@@ -1,0 +1,13 @@
+{
+  "name": "clear4smile",
+  "version": "1.0.0",
+  "description": "A website for Clear4Smile, providing information and services.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "echo 'Add your dev server command here'",
+    "build": "echo 'Add your build command here'"
+  },
+  "keywords": ["clear4smile", "website", "frontend"],
+  "author": "Your Name",
+  "license": "MIT"
+}
