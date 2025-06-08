@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerija | Clear4Smile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            'brand': {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+            }
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    @media (max-width: 768px) {
+      .mobile-menu {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+      }
+      .mobile-menu.active {
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans min-h-screen flex flex-col">
+  <header class="flex items-center justify-between px-6 py-4 bg-white shadow-md sticky top-0 z-50">
+    <a href="index.html" class="text-2xl font-bold text-brand-700">Clear4Smile</a>
+    <!-- Desktop Menu -->
+    <nav class="hidden md:block">      <ul class="flex space-x-6 text-lg font-medium">
+        <li><a href="index.html" class="hover:text-brand-600">Početna</a></li>
+        <li><a href="index.html#services" class="hover:text-brand-600">Usluge</a></li>
+        <li><a href="tehnika-b2b.html" class="hover:text-brand-600">B2B</a></li>
+        <li><a href="index.html#contact" class="hover:text-brand-600">Kontakt</a></li>
+      </ul>
+    </nav>
+    <!-- Mobile Menu Button -->
+    <button id="menuButton" class="md:hidden text-brand-700 hover:text-brand-600 focus:outline-none">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 md:hidden">
+      <div class="p-6">
+        <button id="closeMenu" class="absolute top-4 right-4 text-brand-700 hover:text-brand-600">
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+        <nav class="mt-8">          <ul class="space-y-4">
+            <li><a href="index.html" class="block text-lg font-medium hover:text-brand-600">Početna</a></li>
+            <li><a href="index.html#services" class="block text-lg font-medium hover:text-brand-600">Usluge</a></li>
+            <li><a href="tehnika-b2b.html" class="block text-lg font-medium hover:text-brand-600">B2B</a></li>
+            <li><a href="index.html#contact" class="block text-lg font-medium hover:text-brand-600">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="flex-1 flex flex-col items-center justify-center py-16 px-4">    <h1 class="text-4xl font-extrabold text-brand-700 mb-6">Galerija</h1>
+    <p class="max-w-2xl text-lg text-center text-gray-700 mb-8">Pogledajte slike naših radova, ordinacija i zadovoljnih pacijenata. Uskoro više fotografija i primera!</p>
+    <a href="index.html#services" class="text-brand-600 hover:underline">Nazad na izbor</a>
+  </main>
+  <footer class="bg-gray-900 text-gray-100 py-6 text-center text-sm mt-auto">
+    &copy; 2025 Clear4Smile. Sva prava zadržana.
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('menuButton');
+      const closeButton = document.getElementById('closeMenu');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const overlay = document.createElement('div');
+      overlay.className = 'fixed inset-0 bg-black bg-opacity-50 z-40 hidden';
+      document.body.appendChild(overlay);
+
+      function openMenu() {
+        mobileMenu.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        overlay.classList.remove('hidden');
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+        overlay.classList.add('hidden');
+      }
+
+      menuButton.addEventListener('click', openMenu);
+      closeButton.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+
+      // Close menu when clicking a link
+      const mobileLinks = mobileMenu.getElementsByTagName('a');
+      Array.from(mobileLinks).forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      // Close menu on window resize if open
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768 && mobileMenu.classList.contains('active')) {
+          closeMenu();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

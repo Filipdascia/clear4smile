@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tehnika B2B | Clear4Smile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            'brand': {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+            }
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    @media (max-width: 768px) {
+      .mobile-menu {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+      }
+      .mobile-menu.active {
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans min-h-screen flex flex-col">
+  <header class="flex items-center justify-between px-6 py-4 bg-white shadow-md sticky top-0 z-50">
+    <a href="index.html" class="text-2xl font-bold text-brand-700">Clear4Smile</a>
+    <!-- Desktop Menu -->
+    <nav class="hidden md:block">      <ul class="flex space-x-6 text-lg font-medium">
+        <li><a href="index.html" class="hover:text-brand-600">Početna</a></li>
+        <li><a href="index.html#services" class="hover:text-brand-600">Usluge</a></li>
+        <li><a href="tehnika-b2b.html" class="hover:text-brand-600">B2B</a></li>
+        <li><a href="index.html#contact" class="hover:text-brand-600">Kontakt</a></li>
+      </ul>
+    </nav>
+    <!-- Mobile Menu Button -->
+    <button id="menuButton" class="md:hidden text-brand-700 hover:text-brand-600 focus:outline-none">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 md:hidden">
+      <div class="p-6">
+        <button id="closeMenu" class="absolute top-4 right-4 text-brand-700 hover:text-brand-600">
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+        <nav class="mt-8">          <ul class="space-y-4">
+            <li><a href="index.html" class="block text-lg font-medium hover:text-brand-600">Početna</a></li>
+            <li><a href="index.html#services" class="block text-lg font-medium hover:text-brand-600">Usluge</a></li>
+            <li><a href="tehnika-b2b.html" class="block text-lg font-medium hover:text-brand-600">B2B</a></li>
+            <li><a href="index.html#contact" class="block text-lg font-medium hover:text-brand-600">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 flex flex-col py-16 px-4">
+    <!-- Hero Section -->
+    <div class="max-w-6xl mx-auto w-full mb-16">
+      <div class="bg-gradient-to-r from-brand-600 to-brand-700 rounded-2xl overflow-hidden">
+        <div class="md:flex items-center">
+          <div class="md:w-1/2 p-12 text-white">
+            <h1 class="text-4xl font-bold mb-6">Fleksibilna B2B rešenja za vaš laboratorijski workflow</h1>
+            <p class="text-xl mb-8 text-brand-50">Prilagodljiva rešenja za svaku fazu proizvodnje alignera</p>
+            <p class="text-lg mb-6 text-brand-100">Odaberite nivo usluge koji vam najviše odgovara - od STL fajlova do gotovih alignera sa vašim brendom.</p>
+            <a href="#contact" class="inline-flex items-center px-6 py-3 bg-white text-brand-700 font-bold rounded-full hover:bg-brand-50 transition duration-300">
+              Zatražite ponudu
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>          <div class="md:w-1/2 h-[500px]">
+            <img src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&w=800&h=1000&q=80" 
+                 alt="Modern Dental Office" 
+                 class="w-full h-full object-cover"
+                 onerror="this.src='https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&h=1000&q=80'">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Options -->
+    <div class="max-w-6xl mx-auto w-full mb-16">
+      <h2 class="text-3xl font-bold text-center mb-12 text-brand-700">Izaberite svoj nivo saradnje</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- STL Option -->
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="h-16 w-16 bg-brand-50 rounded-lg flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-brand-700">STL fajlovi</h3>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-brand-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Spremni STL fajlovi za 3D štampu
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-brand-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Digitalno planirani koraci terapije
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-brand-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Tehnička dokumentacija
+            </li>
+          </ul>
+        </div>
+
+        <!-- Printed Models -->
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="h-16 w-16 bg-brand-50 rounded-lg flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-brand-700">3D štampani modeli</h3>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-brand-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Precizno štampani modeli za svaki korak
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-brand-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Spremni za vakuum formiranje
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-brand-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Numerisani i organizovani setovi
+            </li>
+          </ul>
+        </div>
+
+        <!-- Complete Aligners -->
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="h-16 w-16 bg-brand-50 rounded-lg flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-brand-700">Gotovi aligneri</h3>
+          <ul class="space-y-3 text-gray-600 mb-6">
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-brand-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Kompletno izrađeni aligneri
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-brand-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              White-label brendiranje
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-brand-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Prilagođena pakovanja
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- White Label Section -->
+    <div class="max-w-6xl mx-auto w-full mb-16">
+      <div class="bg-brand-50 rounded-2xl p-12">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-6 text-brand-700">White Label rešenja</h2>
+          <p class="text-xl text-gray-600 mb-12">Izgradite svoj brend sa našom podrškom</p>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-xl p-6 shadow-md">
+              <h3 class="text-xl font-bold mb-4 text-brand-700">Pakovanje po meri</h3>
+              <ul class="text-left space-y-3 text-gray-600">
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-brand-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Vaš logo i brending
+                </li>
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-brand-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Izbor dizajna kutije
+                </li>
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-brand-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Prilagođene instrukcije
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-md">
+              <h3 class="text-xl font-bold mb-4 text-brand-700">Marketing podrška</h3>
+              <ul class="text-left space-y-3 text-gray-600">
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-brand-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Marketinški materijali
+                </li>
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-brand-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Online prezentacije
+                </li>
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-brand-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Edukativni materijali
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Features -->
+    <div class="max-w-6xl mx-auto w-full mb-16">
+      <h2 class="text-3xl font-bold text-center mb-12 text-brand-700">Dodatne pogodnosti</h2>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="text-center p-6">
+          <div class="h-12 w-12 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold mb-2">Brza izrada</h3>
+          <p class="text-gray-600 text-sm">Isporuka u roku od 3-5 radnih dana</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="h-12 w-12 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold mb-2">Kvalitet materijala</h3>
+          <p class="text-gray-600 text-sm">Sertifikovani medicinski materijali</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="h-12 w-12 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold mb-2">Tehnička podrška</h3>
+          <p class="text-gray-600 text-sm">Stručna pomoć 24/7</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="h-12 w-12 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold mb-2">Fleksibilne cene</h3>
+          <p class="text-gray-600 text-sm">Količinski popusti</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="max-w-6xl mx-auto w-full mb-16">
+      <div class="bg-gradient-to-r from-brand-600 to-brand-700 rounded-2xl p-12 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">Spremni za saradnju?</h2>
+        <p class="text-xl text-brand-50 mb-8">Kontaktirajte nas za detaljnu ponudu i uslove saradnje</p>
+        <a href="#contact" class="inline-flex items-center px-8 py-4 bg-white text-brand-700 font-bold rounded-full hover:bg-brand-50 transition duration-300">
+          Zatražite ponudu
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="index.html#services" class="inline-flex items-center text-brand-600 hover:text-brand-700 hover:underline">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+        </svg>
+        Nazad na izbor
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-100 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <div class="flex flex-col items-center justify-center space-y-4">
+        <a href="index.html" class="text-2xl font-bold text-white">Clear4Smile</a>
+        <p class="text-gray-400">&copy; 2025 Clear4Smile. Sva prava zadržana.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('menuButton');
+      const closeButton = document.getElementById('closeMenu');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const overlay = document.createElement('div');
+      overlay.className = 'fixed inset-0 bg-black bg-opacity-50 z-40 hidden';
+      document.body.appendChild(overlay);
+
+      function openMenu() {
+        mobileMenu.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        overlay.classList.remove('hidden');
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+        overlay.classList.add('hidden');
+      }      menuButton.addEventListener('click', openMenu);
+      closeButton.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+
+      // Close menu when clicking a link
+      const mobileLinks = mobileMenu.getElementsByTagName('a');
+      Array.from(mobileLinks).forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      // Close menu on window resize if desktop view
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+          closeMenu();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

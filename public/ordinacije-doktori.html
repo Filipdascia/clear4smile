@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordinacije i doktori | Clear4Smile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            'brand': {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+            }
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    @media (max-width: 768px) {
+      .mobile-menu {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+      }
+      .mobile-menu.active {
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans min-h-screen flex flex-col">
+  <header class="flex items-center justify-between px-6 py-4 bg-white shadow-md sticky top-0 z-50">
+    <a href="index.html" class="text-2xl font-bold text-brand-700">Clear4Smile</a>
+    <!-- Desktop Menu -->
+    <nav class="hidden md:block">      <ul class="flex space-x-6 text-lg font-medium">
+        <li><a href="index.html" class="hover:text-brand-600">Početna</a></li>
+        <li><a href="index.html#services" class="hover:text-brand-600">Usluge</a></li>
+        <li><a href="tehnika-b2b.html" class="hover:text-brand-600">B2B</a></li>
+        <li><a href="index.html#contact" class="hover:text-brand-600">Kontakt</a></li>
+      </ul>
+    </nav>
+    <!-- Mobile Menu Button -->
+    <button id="menuButton" class="md:hidden text-brand-700 hover:text-brand-600 focus:outline-none">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 md:hidden">
+      <div class="p-6">
+        <button id="closeMenu" class="absolute top-4 right-4 text-brand-700 hover:text-brand-600">
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+        <nav class="mt-8">          <ul class="space-y-4">
+            <li><a href="index.html" class="block text-lg font-medium hover:text-brand-600">Početna</a></li>
+            <li><a href="index.html#services" class="block text-lg font-medium hover:text-brand-600">Usluge</a></li>
+            <li><a href="tehnika-b2b.html" class="block text-lg font-medium hover:text-brand-600">B2B</a></li>
+            <li><a href="index.html#contact" class="block text-lg font-medium hover:text-brand-600">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 flex flex-col py-16 px-4">
+    <!-- Hero Section -->
+    <div class="max-w-6xl mx-auto w-full mb-16">
+      <div class="bg-gradient-to-r from-brand-600 to-brand-700 rounded-2xl overflow-hidden">
+        <div class="md:flex items-center">
+          <div class="md:w-1/2 p-12 text-white">
+            <h1 class="text-4xl font-bold mb-6">Uvedite folije za ispravljanje zuba u vašu ordinaciju</h1>
+            <p class="text-xl mb-8 text-brand-50">Bez dodatnog ulaganja u opremu</p>
+            <p class="text-lg mb-6 text-brand-100">Ako vaša ordinacija želi da ponudi savremeno rešenje za ispravljanje zuba, providne folije predstavljaju idealan način da proširite ponudu i povećate broj zadovoljnih pacijenata.</p>
+            <a href="#contact" class="inline-flex items-center px-6 py-3 bg-white text-brand-700 font-bold rounded-full hover:bg-brand-50 transition duration-300">
+              Započnite saradnju
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+          <div class="md:w-1/2">
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" 
+                 alt="Modern Dental Office" 
+                 class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 mb-16">
+      <!-- Left Column -->
+      <div class="space-y-8">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <h2 class="text-2xl font-bold mb-6 text-brand-700">Saradnja sa sertifikovanom laboratorijom</h2>
+          <p class="text-gray-600 mb-6">Saradnjom sa sertifikovanom laboratorijom koja izrađuje folije za ispravljanje zuba po digitalnim otiscima, omogućavate brzu i personalizovanu ortodontsku terapiju, bez potrebe za fiksnim aparatima.</p>
+          
+          <h3 class="text-xl font-semibold mb-4 text-brand-600">Šta nudimo ordinacijama:</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Izrada folija na osnovu digitalnog otiska (STL fajl) ili klasičnog otiska</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Ortodontska podrška pri planiranju slučajeva</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Brzi rokovi izrade – serije folija spremne za terapiju u roku od nekoliko dana</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Mogućnost brendiranja – vaš logo na svakom pakovanju folija</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Biranje izgleda pakovanja – minimalistički dizajn, medicinski stil ili potpuno personalizovan vizual</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Neutralna ili personalizovana dokumentacija za pacijente</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="space-y-8">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <div class="flex items-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <h3 class="text-xl font-semibold text-brand-700">Dostupno širom Srbije</h3>
+          </div>
+          <p class="text-gray-600 mb-6">Dostupno za ordinacije iz Beograda, Novog Sada i cele Srbije. Ukoliko ste stomatolog ili ortodont i želite da vašim pacijentima ponudite diskretno, estetski prihvatljivo i moderno rešenje za lakše anomalije, kontaktirajte nas.</p>
+        </div>
+
+        <div class="bg-brand-50 rounded-xl shadow-lg p-8">
+          <div class="flex items-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+            <h3 class="text-xl font-semibold text-brand-700">White-label rešenje</h3>
+          </div>
+          <p class="text-gray-600 mb-6">Želite da pakovanja izgledaju kao da dolaze direktno iz vaše ordinacije? Mi nudimo white-label rešenje: vi birate dizajn, boje i poruke, a mi obezbeđujemo proizvodnju i isporuku – spremno za vaše pacijente.</p>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="bg-gradient-to-br from-brand-600 to-brand-700 rounded-xl shadow-lg p-8 text-white">
+          <div class="flex items-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-100 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <h3 class="text-xl font-semibold">Zatražite probni slučaj</h3>
+          </div>
+          <p class="mb-6 text-brand-50">Pošaljite nam poruku i zatražite probni slučaj – budite među prvim ordinacijama koje koriste domaću podršku u izradi digitalnih folija za ortodontske tretmane.</p>
+          <a href="#contact" class="inline-flex items-center px-6 py-3 bg-white text-brand-700 font-bold rounded-full hover:bg-brand-50 transition duration-300">
+            Kontaktirajte nas
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="index.html#services" class="inline-flex items-center text-brand-600 hover:text-brand-700 hover:underline">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+        </svg>
+        Nazad na izbor
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-100 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <div class="flex flex-col items-center justify-center space-y-4">
+        <a href="index.html" class="text-2xl font-bold text-white">Clear4Smile</a>
+        <p class="text-gray-400">&copy; 2025 Clear4Smile. Sva prava zadržana.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('menuButton');
+      const closeButton = document.getElementById('closeMenu');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const overlay = document.createElement('div');
+      overlay.className = 'fixed inset-0 bg-black bg-opacity-50 z-40 hidden';
+      document.body.appendChild(overlay);
+
+      function openMenu() {
+        mobileMenu.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        overlay.classList.remove('hidden');
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+        overlay.classList.add('hidden');
+      }      menuButton.addEventListener('click', openMenu);
+      closeButton.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+
+      // Close menu when clicking a link
+      const mobileLinks = mobileMenu.getElementsByTagName('a');
+      Array.from(mobileLinks).forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      // Close menu on window resize if desktop view
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+          closeMenu();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
