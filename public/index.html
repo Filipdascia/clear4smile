@@ -4,11 +4,111 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clear4Smile</title>
-  <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="../src/styles/main.css">
+  <link rel="icon" href="/public/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
 </head>
-<body>
-  <div id="root"></div>
-  <script src="../src/index.js"></script>
+<body class="bg-gray-50 text-gray-900 font-sans">
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 bg-white shadow-md">
+    <nav>
+      <ul class="flex space-x-6 text-lg font-medium">
+        <li><a href="#carousel" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#services" class="hover:text-blue-600">Services</a></li>
+        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Carousel Section -->
+  <section id="carousel" class="w-full flex flex-col items-center justify-center min-h-[50vh] bg-white text-center m-0 p-0 pb-12">
+    <div class="relative w-full max-w-full mx-auto m-0 p-0">
+      <video id="carouselVideo" class="w-full h-[38.4rem] md:h-[45.6rem] lg:h-[53.2rem] object-cover rounded-none m-0 p-0" autoplay muted playsinline poster="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=facearea&w=1920&q=80">
+        <source src="Clear4Smile-Aligner-Teeth.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="absolute bottom-0 left-0 w-full h-[5%] z-10 bg-white"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-end text-white bg-black/30 pb-[20%] md:pb-[20%] lg:pb-[5%]">
+        <h1 class="text-4xl md:text-5xl font-extrabold drop-shadow-lg">Your Smile, Our Passion</h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto mt-4 drop-shadow-lg p-[5px]">Welcome to Clear4Smile – providing modern dental care with a personal touch. Discover our services and let us help you achieve your best smile.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Cards Section -->
+  <section id="services" class="py-16 px-4 bg-white">
+    <h2 class="text-3xl font-bold text-center mb-10">Usluge</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="bg-gray-100 rounded-lg shadow p-6 flex flex-col items-center">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=256&q=80" alt="Pacijenti" class="h-24 w-24 object-cover rounded-full mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Pacijenti</h3>
+        <p class="text-gray-600 text-center">Pristupite personalizovanim uslugama i informacijama za vaše zdravlje i osmeh.</p>
+      </div>
+      <div class="bg-gray-100 rounded-lg shadow p-6 flex flex-col items-center">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=256&q=80" alt="Ordinacije i doktori" class="h-24 w-24 object-cover rounded-full mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Ordinacije i doktori</h3>
+        <p class="text-gray-600 text-center">Informacije i podrška za dentalne ordinacije i stručnjake.</p>
+      </div>
+      <div class="bg-gray-100 rounded-lg shadow p-6 flex flex-col items-center">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=256&q=80" alt="Tehnika B2B" class="h-24 w-24 object-cover rounded-full mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Tehnika B2B</h3>
+        <p class="text-gray-600 text-center">Rešenja i saradnja za dentalne tehničare i B2B partnere.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-4 bg-blue-50">
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+        <p class="mb-2">123 Smile Street, Happy City, 12345</p>
+        <p class="mb-2">Phone: <a href="tel:+1234567890" class="text-blue-600 hover:underline">+1 234 567 890</a></p>
+        <p class="mb-2">Email: <a href="mailto:info@clear4smile.com" class="text-blue-600 hover:underline">info@clear4smile.com</a></p>
+        <p>Open: Mon-Fri 8:00-17:00</p>
+      </div>
+      <div>
+        <iframe class="w-full h-64 rounded-lg border-0" src="https://www.openstreetmap.org/export/embed.html?bbox=19.0402%2C47.4979%2C19.0502%2C47.5079&amp;layer=mapnik" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-100 py-6 text-center text-sm">
+    &copy; 2025 Clear4Smile. All rights reserved.
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script>
+    // Carousel functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.carousel-img');
+      let current = 0;
+      function showImage(idx) {
+        images.forEach((img, i) => {
+          img.classList.toggle('hidden', i !== idx);
+        });
+      }
+      document.getElementById('prevBtn').onclick = function() {
+        current = (current - 1 + images.length) % images.length;
+        showImage(current);
+      };
+      document.getElementById('nextBtn').onclick = function() {
+        current = (current + 1) % images.length;
+        showImage(current);
+      };
+      showImage(current);
+    });
+  </script>
 </body>
 </html>
